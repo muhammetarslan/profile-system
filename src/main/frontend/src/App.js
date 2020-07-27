@@ -25,9 +25,14 @@ const UserProfiles = () => {
   return UserProfiles.map((userProfile, index) => {
     return (
       <div key={index}>
-        {/*todo: profile image */}
+        {userProfile.userProfileId ? (
+          <img
+            src={`http://localhost:8080/api/v1/user-profile/${userProfile.userProfileId}/image/download`}
+          ></img>
+        ) : null}
         <br />
         <br />
+
         <h1>{userProfile.username}</h1>
         <p>{userProfile.userProfileId}</p>
         <MyDropzone {...userProfile} />
