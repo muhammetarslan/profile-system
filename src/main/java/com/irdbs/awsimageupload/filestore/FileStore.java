@@ -39,5 +39,11 @@ public class FileStore {
         }
 
     }
+/*
+    todo:implement download
+ */
+    public byte[] download(String path, String key) {
 
+        return new byte[]{};
+    }
 }
